@@ -110,13 +110,19 @@ Control + C
 
 ## 8. Kiểm tra trước khi đăng website
 
-Chạy:
+Để kiểm tra bản chạy trên máy:
 
 ```bash
 pnpm run build
 ```
 
-Nếu Terminal hiển thị `Build complete`, dự án đã biên dịch thành công.
+Để kiểm tra đúng bản tĩnh sẽ được đưa lên GitHub Pages:
+
+```bash
+NEXT_PUBLIC_BASE_PATH=/portfolio pnpm run export
+```
+
+Nếu Terminal không báo lỗi và thư mục `out` được tạo, website đã sẵn sàng để deploy.
 
 ## 9. Những file quan trọng
 
@@ -184,7 +190,111 @@ public/files/truong-van-hien-cv.pdf
 
 Nếu giữ nguyên tên file, các nút `Xem CV` trên website không cần chỉnh sửa.
 
-## Quy trình sử dụng hằng ngày
+## 13. Website đang được deploy ở đâu?
+
+Portfolio đang được xuất bản miễn phí bằng **GitHub Pages** tại:
+
+```text
+https://truongvanhien194276.github.io/portfolio/
+```
+
+Mã nguồn được lưu trong repository:
+
+```text
+https://github.com/TruongVanHien194276/portfolio
+```
+
+## 14. Cơ chế tự động deploy
+
+Dự án đã được cấu hình tự động deploy trong:
+
+```text
+.github/workflows/deploy-pages.yml
+```
+
+Mỗi khi có code mới được đẩy lên nhánh `main`, GitHub sẽ tự thực hiện:
+
+1. Cài đặt thư viện.
+2. Tạo bản website tĩnh.
+3. Đưa bản mới lên GitHub Pages.
+4. Thay thế phiên bản cũ đang hiển thị trên website.
+
+Bạn không cần chạy thêm lệnh deploy riêng.
+
+> Lưu ý: Nhấn `Command + S` chỉ cập nhật bản xem trước tại `localhost`. Website thật chỉ tự deploy sau khi bạn chạy `git push origin main`.
+
+## 15. Cách cập nhật website sau khi sửa code
+
+Sau khi chỉnh sửa và kiểm tra tại `http://localhost:3000/`, mở Terminal trong Visual Studio Code và chạy lần lượt:
+
+### Bước 1: Xem những file đã thay đổi
+
+```bash
+git status
+```
+
+### Bước 2: Chọn các file nội dung và hình ảnh cần cập nhật
+
+```bash
+git add app public README.md
+```
+
+Nếu bạn sửa một file khác, thêm chính xác file đó vào lệnh `git add`.
+
+### Bước 3: Tạo bản ghi thay đổi
+
+```bash
+git commit -m "Cap nhat portfolio"
+```
+
+Bạn có thể thay nội dung trong dấu ngoặc kép bằng mô tả ngắn, ví dụ:
+
+```bash
+git commit -m "Cap nhat du an PubPower"
+```
+
+### Bước 4: Đẩy code lên GitHub
+
+```bash
+git push origin main
+```
+
+Ngay sau bước này, quy trình tự động deploy sẽ bắt đầu. Thông thường website cần khoảng 1–3 phút để hiển thị phiên bản mới.
+
+## 16. Kiểm tra trạng thái deploy
+
+Mở trang sau:
+
+```text
+https://github.com/TruongVanHien194276/portfolio/actions
+```
+
+Trạng thái của lần deploy mới nhất:
+
+- Biểu tượng màu vàng: đang xử lý.
+- Dấu tích màu xanh: deploy thành công.
+- Dấu X màu đỏ: deploy thất bại.
+
+Sau khi có dấu tích xanh, mở lại website và nhấn:
+
+```text
+Command + Shift + R
+```
+
+Thao tác này tải lại toàn bộ trang và bỏ qua dữ liệu cũ trong bộ nhớ trình duyệt.
+
+## 17. Deploy thủ công khi cần
+
+Nếu code trên GitHub đã đúng nhưng website chưa tự cập nhật:
+
+1. Mở trang `Actions` của repository.
+2. Chọn **Deploy portfolio to GitHub Pages**.
+3. Chọn **Run workflow**.
+4. Giữ nhánh `main` và nhấn **Run workflow**.
+
+Không cần deploy thủ công nếu quy trình tự động sau `git push` đang hoạt động bình thường.
+
+## 18. Quy trình sử dụng hằng ngày
 
 Mỗi lần muốn chỉnh portfolio, chỉ cần mở Terminal và chạy:
 
@@ -198,3 +308,14 @@ Sau đó mở:
 ```text
 http://localhost:3000/
 ```
+
+Sau khi sửa xong:
+
+```bash
+git status
+git add app public README.md
+git commit -m "Cap nhat portfolio"
+git push origin main
+```
+
+Website thật sẽ tự động deploy sau lệnh cuối cùng.

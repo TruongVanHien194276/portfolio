@@ -238,9 +238,18 @@ export default function Home() {
           </div>
 
           <div className="result-strip dark-results">
-            <div><strong>04</strong><span>Nhóm chủ đề sản phẩm được hệ thống hóa</span></div>
-            <div><strong>EN</strong><span>Toàn bộ nội dung được biên tập bằng tiếng Anh</span></div>
-            <div><strong>A–Z</strong><span>Từ cấu trúc thông tin đến bản dựng hoàn chỉnh</span></div>
+            <div>
+              <strong>Nghiên cứu</strong>
+              <span>Đọc và chắt lọc tài liệu sản phẩm bằng tiếng Anh, xác định tính năng, quy trình và thông tin người dùng cần hiểu.</span>
+            </div>
+            <div>
+              <strong>Biên tập</strong>
+              <span>Chuyển thuật ngữ kỹ thuật thành kịch bản có cấu trúc, sắp xếp thông tin theo từng bước và giữ thông điệp nhất quán.</span>
+            </div>
+            <div>
+              <strong>Hoàn thiện</strong>
+              <span>Dựng video, bổ sung callout và nhấn mạnh thao tác trên giao diện để người xem dễ theo dõi và áp dụng.</span>
+            </div>
           </div>
 
           <div className="video-showcase-grid">

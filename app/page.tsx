@@ -53,7 +53,12 @@ export default function Home() {
     <main>
       <header className="site-header">
         <a className="wordmark" href="#top" aria-label="Trương Văn Hiển — Về đầu trang">
-          <span className="wordmark-mark">HV</span>
+          <img
+            className="wordmark-mark"
+            src={assetPath("/media/about/avatar-truong-van-hien.jpg")}
+            alt=""
+            aria-hidden="true"
+          />
           <span className="wordmark-copy">
             <strong>Trương Văn Hiển</strong>
             <small>Media · Content · Meta Ads</small>

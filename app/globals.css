@@ -24,7 +24,7 @@ button, input, textarea { font: inherit; }
 .section-shell { width: min(1440px, calc(100% - 96px)); margin-inline: auto; }
 .site-header { position: fixed; z-index: 50; top: 18px; left: 50%; transform: translateX(-50%); width: min(1440px, calc(100% - 48px)); display: flex; align-items: center; justify-content: space-between; padding: 9px 11px 9px 10px; background: color-mix(in srgb, var(--paper) 91%, transparent); backdrop-filter: blur(18px); border: 1px solid rgba(23, 23, 22, .14); border-radius: 999px; box-shadow: 0 8px 30px rgba(23,23,22,.045); }
 .wordmark { display: flex; align-items: center; gap: 12px; min-width: 270px; }
-.wordmark-mark { display: grid; place-items: center; width: 46px; height: 46px; flex: 0 0 46px; border-radius: 50%; background: var(--wine); color: white; font-family: var(--font-heading); font-size: 15px; font-weight: 800; letter-spacing: -.04em; }
+.wordmark-mark { width: 46px; height: 46px; flex: 0 0 46px; border: 2px solid rgba(255,255,255,.88); border-radius: 50%; object-fit: cover; box-shadow: 0 0 0 1px rgba(23,23,22,.12); }
 .wordmark-copy { display: flex; flex-direction: column; gap: 3px; }
 .wordmark-copy strong { font-family: var(--font-heading); font-size: 14px; line-height: 1; letter-spacing: -.025em; }
 .wordmark-copy small { color: var(--muted); font-size: 8px; line-height: 1; font-weight: 750; text-transform: uppercase; letter-spacing: .11em; }

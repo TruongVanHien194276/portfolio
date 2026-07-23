@@ -46,6 +46,7 @@ const experience = [
 ];
 
 const Arrow = () => <span aria-hidden="true">↗</span>;
+const assetPath = (path: string) => `${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}${path}`;
 
 export default function Home() {
   return (
@@ -64,7 +65,7 @@ export default function Home() {
           <a href="#capabilities">Năng lực</a>
           <a href="#experience">Kinh nghiệm</a>
           <a href="#contact">Liên hệ</a>
-          <a className="nav-cta" href="/files/truong-van-hien-cv.pdf" download>
+          <a className="nav-cta" href={assetPath("/files/truong-van-hien-cv.pdf")} download>
             Xem CV <Arrow />
           </a>
         </nav>
@@ -76,7 +77,7 @@ export default function Home() {
             <a href="#capabilities">Năng lực</a>
             <a href="#experience">Kinh nghiệm</a>
             <a href="#contact">Liên hệ</a>
-            <a href="/files/truong-van-hien-cv.pdf" download>Xem CV</a>
+            <a href={assetPath("/files/truong-van-hien-cv.pdf")} download>Xem CV</a>
           </div>
         </details>
       </header>
@@ -99,7 +100,7 @@ export default function Home() {
           </div>
         </div>
         <div className="hero-media hero-portrait">
-          <img src="/media/about/personal-02.jpg" alt="Chân dung Trương Văn Hiển" />
+          <img src={assetPath("/media/about/personal-02.jpg")} alt="Chân dung Trương Văn Hiển" />
           <div className="hero-media-label">
             <span>Trương Văn Hiển</span>
             <span>Hà Nội · Việt Nam</span>
@@ -134,9 +135,9 @@ export default function Home() {
           </div>
 
           <div className="dunnio-grid media-grid clean-gallery">
-            <img className="dunnio-main" src="/media/dunnio/navy-suit-clean.png" alt="Chi tiết bộ suit xanh navy của Dunnio Tailor" />
-            <img src="/media/dunnio/white-tux-cover.jpg" alt="Khách hàng thử tuxedo trắng tại Dunnio Tailor" />
-            <img src="/media/dunnio/product-cover.jpg" alt="Cận cảnh chất liệu và đường may suit" />
+            <img className="dunnio-main" src={assetPath("/media/dunnio/navy-suit-clean.png")} alt="Chi tiết bộ suit xanh navy của Dunnio Tailor" />
+            <img src={assetPath("/media/dunnio/white-tux-cover.jpg")} alt="Khách hàng thử tuxedo trắng tại Dunnio Tailor" />
+            <img src={assetPath("/media/dunnio/product-cover.jpg")} alt="Cận cảnh chất liệu và đường may suit" />
           </div>
 
           <div className="case-grid">
@@ -206,9 +207,9 @@ export default function Home() {
               </div>
             </div>
             <div className="product-photo-grid">
-              <img className="product-photo-main" src="/media/dunnio/white-trouser-clean.png" alt="Phom quần âu trắng của Dunnio Tailor" />
-              <img className="product-photo-craft" src="/media/dunnio/gray-suit-clean.jpg" alt="Cận cảnh suit xám kẻ với áo gile và cà vạt hoàn thiện" />
-              <img className="product-photo-shoes" src="/media/dunnio/shoes-clean.png" alt="Giày da đen phối cùng suit" />
+              <img className="product-photo-main" src={assetPath("/media/dunnio/white-trouser-clean.png")} alt="Phom quần âu trắng của Dunnio Tailor" />
+              <img className="product-photo-craft" src={assetPath("/media/dunnio/gray-suit-clean.jpg")} alt="Cận cảnh suit xám kẻ với áo gile và cà vạt hoàn thiện" />
+              <img className="product-photo-shoes" src={assetPath("/media/dunnio/shoes-clean.png")} alt="Giày da đen phối cùng suit" />
             </div>
           </div>
 
@@ -245,11 +246,11 @@ export default function Home() {
           <div className="video-showcase-grid">
             <div className="browser-stage">
               <div className="browser-bar"><i /><i /><i /><span>Reward Ads · Video sản phẩm</span></div>
-              <video controls playsInline preload="metadata"><source src="/media/pubpower/reward-ads.mp4" type="video/mp4" /></video>
+              <video controls playsInline preload="metadata"><source src={assetPath("/media/pubpower/reward-ads.mp4")} type="video/mp4" /></video>
             </div>
             <div className="browser-stage">
               <div className="browser-bar"><i /><i /><i /><span>PubPower MCM · Video hướng dẫn</span></div>
-              <video controls playsInline preload="metadata"><source src="/media/pubpower/mcm.mp4" type="video/mp4" /></video>
+              <video controls playsInline preload="metadata"><source src={assetPath("/media/pubpower/mcm.mp4")} type="video/mp4" /></video>
             </div>
           </div>
 
@@ -300,11 +301,11 @@ export default function Home() {
 
           <div className="interdog-project-media">
             <figure>
-              <img src="/media/pubpower/reward-ads.jpg" alt="Tư liệu video sản phẩm Reward Ads của PubPower" />
+              <img src={assetPath("/media/pubpower/reward-ads.jpg")} alt="Tư liệu video sản phẩm Reward Ads của PubPower" />
               <figcaption><span>Dự án tiêu biểu</span><strong>PubPower · Reward Ads</strong></figcaption>
             </figure>
             <figure>
-              <img src="/media/pubpower/mcm.jpg" alt="Tư liệu video hướng dẫn PubPower MCM" />
+              <img src={assetPath("/media/pubpower/mcm.jpg")} alt="Tư liệu video hướng dẫn PubPower MCM" />
               <figcaption><span>Creative & product communication</span><strong>PubPower · MCM</strong></figcaption>
             </figure>
           </div>
@@ -378,14 +379,14 @@ export default function Home() {
             </p>
           </div>
           <div className="photo-collage">
-            <img className="photo-a" src="/media/photography/TN_TVH.jpeg" alt="Tốt nghiệp TVH"
+            <img className="photo-a" src={assetPath("/media/photography/TN_TVH.jpeg")} alt="Tốt nghiệp TVH"
                   style={{
                     objectPosition: "center 70%"
                   }}
             />
-            <img className="photo-b" src="/media/photography/KyYeu_HS.PNG" alt="Kỷ yếu học sinh VinSchool" />
-            <img className="photo-c" src="/media/photography/event-behind-the-scenes.jpg" alt="Toàn cảnh hậu trường và khán giả tại sự kiện" />
-            <img className="photo-d" src="/media/photography/TN_DLDA.jpg" alt="Tốt nghiệp ĐLDA" />
+            <img className="photo-b" src={assetPath("/media/photography/KyYeu_HS.PNG")} alt="Kỷ yếu học sinh VinSchool" />
+            <img className="photo-c" src={assetPath("/media/photography/event-behind-the-scenes.jpg")} alt="Toàn cảnh hậu trường và khán giả tại sự kiện" />
+            <img className="photo-d" src={assetPath("/media/photography/TN_DLDA.jpg")} alt="Tốt nghiệp ĐLDA" />
           </div>
 
           <div className="project-breakdown photo-breakdown">
@@ -413,7 +414,7 @@ export default function Home() {
             <div><span>03</span><h4>Màu sắc nhất quán</h4><p>Chỉnh màu theo từng bộ ảnh nhưng vẫn ưu tiên màu da tự nhiên và cảm giác dễ chịu.</p></div>
           </div>
           <div className="photo-story">
-            <img src="/media/photography/TNLS.JPG" alt="Khoảnh khắc chuyển động được bắt trên sân khấu" />
+            <img src={assetPath("/media/photography/TNLS.JPG")} alt="Khoảnh khắc chuyển động được bắt trên sân khấu" />
             <div>
               <p className="case-label">Giá trị ứng dụng</p>
               <p className="case-lead">Khả năng quan sát khoảnh khắc, tổ chức bố cục và xử lý ánh sáng giúp tôi tạo ra tư liệu vừa giàu cảm xúc, vừa có thể sử dụng hiệu quả trong các chiến dịch nội dung của thương hiệu.</p>
@@ -425,7 +426,7 @@ export default function Home() {
 
       <section className="about section-shell" id="about">
         <div className="about-photo-wrap">
-          <img src="/media/about/personal-04.jpg" alt="Chân dung Trương Văn Hiển tại không gian thành phố về đêm" />
+          <img src={assetPath("/media/about/personal-04.jpg")} alt="Chân dung Trương Văn Hiển tại không gian thành phố về đêm" />
           <span>Hà Nội, Việt Nam</span>
         </div>
         <div className="about-copy">
@@ -519,7 +520,7 @@ export default function Home() {
           </div>
           <div className="contact-footer">
             <div><span>Trương Văn Hiển</span><span>Media Executive · Content Creator · Meta Ads</span><span>Thanh Xuân, Hà Nội</span></div>
-            <div><a href="/files/truong-van-hien-cv.pdf" download>Tải CV</a><a href="#top">Về đầu trang ↑</a></div>
+            <div><a href={assetPath("/files/truong-van-hien-cv.pdf")} download>Tải CV</a><a href="#top">Về đầu trang ↑</a></div>
           </div>
         </div>
       </section>

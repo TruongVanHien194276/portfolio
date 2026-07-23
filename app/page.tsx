@@ -301,12 +301,14 @@ export default function Home() {
 
           <div className="interdog-project-media">
             <figure>
-              <img src={assetPath("/media/pubpower/reward-ads.jpg")} alt="Tư liệu video sản phẩm Reward Ads của PubPower" />
-              <figcaption><span>Dự án tiêu biểu</span><strong>PubPower · Reward Ads</strong></figcaption>
+              <img src={assetPath("/media/pubpower/reward-ads.jpg")} alt="Minh họa video hướng dẫn sản phẩm dùng trong nội dung quảng cáo" />
+              <i className="brand-mask brand-mask-light" aria-hidden="true" />
+              <figcaption><span>Minh họa định dạng creative</span><strong>Video hướng dẫn sản phẩm</strong></figcaption>
             </figure>
             <figure>
-              <img src={assetPath("/media/pubpower/mcm.jpg")} alt="Tư liệu video hướng dẫn PubPower MCM" />
-              <figcaption><span>Creative & product communication</span><strong>PubPower · MCM</strong></figcaption>
+              <img src={assetPath("/media/pubpower/mcm.jpg")} alt="Minh họa nội dung giới thiệu tính năng cho chiến dịch quảng cáo" />
+              <i className="brand-mask brand-mask-blue" aria-hidden="true" />
+              <figcaption><span>Minh họa nội dung quảng cáo</span><strong>Video giới thiệu tính năng</strong></figcaption>
             </figure>
           </div>
 

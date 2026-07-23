@@ -168,8 +168,11 @@ button, input, textarea { font: inherit; }
 .workflow-board { padding: 30px; border-radius: 16px; background: #e9e2d9; }
 .interdog-results { margin-bottom: 48px; }
 .interdog-project-media { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 64px; }
-.interdog-project-media figure { margin: 0; overflow: hidden; border-radius: 14px; background: var(--white); border: 1px solid var(--line); }
+.interdog-project-media figure { position: relative; margin: 0; overflow: hidden; border-radius: 14px; background: var(--white); border: 1px solid var(--line); }
 .interdog-project-media img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; }
+.interdog-project-media .brand-mask { position: absolute; z-index: 1; top: 2.6%; right: 2.2%; width: 16%; height: 7.5%; pointer-events: none; }
+.interdog-project-media .brand-mask-light { background: #fff; }
+.interdog-project-media .brand-mask-blue { background: #33b8cf; }
 .interdog-project-media figcaption { display: flex; justify-content: space-between; align-items: center; gap: 24px; padding: 17px 20px; }
 .interdog-project-media figcaption span { color: var(--muted); text-transform: uppercase; letter-spacing: .1em; font-size: 9px; }
 .interdog-project-media figcaption strong { font-size: 13px; }

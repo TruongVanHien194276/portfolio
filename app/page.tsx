@@ -230,17 +230,17 @@ export default function Home() {
           <div className="project-title-row light">
             <div>
               <p className="project-client">PubPower</p>
-              <h3>Làm rõ một sản phẩm nhiều thuật ngữ.</h3>
+              <h3>Chuyển hóa sản phẩm phức tạp thành nội dung dễ tiếp nhận.</h3>
             </div>
             <p className="project-summary">
-              Biên tập chuỗi video hướng dẫn sản phẩm ad-tech bằng tiếng Anh, chuyển quy trình nhiều bước thành mạch thông tin ngắn gọn và dễ theo dõi.
+              Biên tập chuỗi video hướng dẫn sản phẩm ad-tech bằng tiếng Anh, hệ thống hóa các quy trình nhiều bước thành nội dung mạch lạc, trực quan và dễ ứng dụng.
             </p>
           </div>
 
           <div className="result-strip dark-results">
-            <div><strong>04</strong><span>Nhóm nội dung sản phẩm được chuẩn hóa</span></div>
-            <div><strong>02</strong><span>Video tiêu biểu được trình bày trong portfolio</span></div>
-            <div><strong>16:9</strong><span>Định dạng thống nhất cho nội dung hướng dẫn</span></div>
+            <div><strong>04</strong><span>Nhóm chủ đề sản phẩm được hệ thống hóa</span></div>
+            <div><strong>EN</strong><span>Toàn bộ nội dung được biên tập bằng tiếng Anh</span></div>
+            <div><strong>A–Z</strong><span>Từ cấu trúc thông tin đến bản dựng hoàn chỉnh</span></div>
           </div>
 
           <div className="video-showcase-grid">
